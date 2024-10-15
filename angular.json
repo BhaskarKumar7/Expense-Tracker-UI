@@ -27,9 +27,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/assets/css/light.css",
+               "./node_modules/notyf/notyf.min.css",
+               "./node_modules/flatpickr/dist/flatpickr.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/assets/js/app.js",
+              "./node_modules/assets/js/settings.js"
+              
+            ]
           },
           "configurations": {
             "production": {

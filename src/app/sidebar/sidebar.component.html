@@ -1,0 +1,76 @@
+<nav id="sidebar" class="sidebar js-sidebar">
+    <div class="sidebar-content js-simplebar">
+        <a class='sidebar-brand' href='index.html'>
+            <span class="sidebar-brand-text align-middle">
+                Personal Expense Tracker
+            </span>
+            <svg class="sidebar-brand-icon align-middle" width="32px" height="32px" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"
+                stroke-linecap="square" stroke-linejoin="miter" color="#FFFFFF" style="margin-left: -3px">
+                <path d="M12 4L20 8.00004L12 12L4 8.00004L12 4Z"></path>
+                <path d="M20 12L12 16L4 12"></path>
+                <path d="M20 16L12 20L4 16"></path>
+            </svg>
+        </a>
+
+        <div class="sidebar-user">
+            <div class="d-flex justify-content-center">
+                <div class="flex-shrink-0">
+                    <img src="assets/images/user.svg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
+                </div>
+                <div class="flex-grow-1 ps-2">
+                    <div class="sidebar-user-subtitle">admin</div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li class="sidebar-header">
+                Menu
+            </li>
+            <li class="sidebar-item">
+                <a data-bs-target="#mngemp" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Transaction Management</span>
+                </a>
+                <ul id="mngemp" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class='sidebar-link' [routerLink]="['/add-expense']"><i class="align-middle" data-feather="user-plus"></i>
+                            <span class="align-middle">Add Expense</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class='sidebar-link' [routerLink]="['/add-income']"><i class="align-middle" data-feather="user-check"></i>
+                            <span class="align-middle">Add Income</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class='sidebar-link' [routerLink]="['/add-bank']"><i class="align-middle" data-feather="user-x"></i>
+                            <span class="align-middle">Add Bank</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class='sidebar-link' [routerLink]="['/bank-acc-list']"><i class="align-middle" data-feather="user-x"></i>
+                            <span class="align-middle">Bank Accounts List</span></a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="sidebar-item">
+                <a data-bs-target="#emppayroll" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Transaction Listing</span>
+                </a>
+                <ul id="emppayroll" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class='sidebar-link' [routerLink]="['/income-list']"><i class="align-middle" data-feather="dollar-sign"></i>
+                            <span class="align-middle">Income List</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class='sidebar-link' [routerLink]="['/expense-list']"><i class="align-middle" data-feather="dollar-sign"></i>
+                            <span class="align-middle">Expense List</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class='sidebar-link' [routerLink]="['/report']"><i class="align-middle" data-feather="dollar-sign"></i>
+                            <span class="align-middle">Report</span></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</nav>

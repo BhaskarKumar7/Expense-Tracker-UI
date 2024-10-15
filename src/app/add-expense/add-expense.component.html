@@ -1,0 +1,66 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+    <div class="main">
+        <app-header></app-header>
+        <main class="content">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-12">
+                        <form #expenseForm="ngForm" (submit)="registerExpense(expenseForm)">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Add Expense Details</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="m-lg-3">
+                                        <div class="row mb-3">
+                                            <div class="col-md-8">
+                                                <label class="form-label" for="bankAccountId">Select Bank Account</label>
+                                          <select class="form-select choices-single" id="bankAccountId" name="bankAccountId" [(ngModel)]="expenseRequest.bankAccountId">
+                                              <option *ngFor="let bnkAcc of bankAccList" [value]="bnkAcc.bankAccountId">
+                                                {{bnkAcc.bankName}},  
+                                                {{bnkAcc.accountNo}},
+                                                {{bnkAcc.accountType}}
+                                            </option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-8">
+                                                <label class="form-label" for="categoryId">Select Category Type</label>
+                                          <select class="form-select choices-single" id="categoryId" name="categoryId" [(ngModel)]="expenseRequest.categoryId">
+                                              <option *ngFor="let ctgry of categoriesList" [value]="ctgry.categoryId">{{ctgry.categoryName}}</option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-8">
+                                                <label class="form-label">Expense</label>
+                                          <input class="form-control form-control-lg" type="number" name="expense" [(ngModel)]="expenseRequest.expense" placeholder="Enter expense" required/>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="row mb-3">
+                                          <div class="col-md-8">
+                                              <label class="form-label">Add Description (Optional)</label>
+                                        <input class="form-control form-control-lg" type="text" name="description" [(ngModel)]="expenseRequest.description" placeholder="Enter the description" required/>
+                                          </div>
+                                        </div>
+                                        <div class="mb-3">
+                                              <div class="mt-3">
+                                                  <button class="btn btn-primary" type="submit" [disabled]="!expenseForm.valid">
+                                                      Add Expense
+                                                  </button>
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</div>
